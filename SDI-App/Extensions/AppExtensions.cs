@@ -13,7 +13,7 @@ public static class PhoneExtensions
     {
         services.AddDbContext<DataContext>(options =>
         {
-            options.UseSqlServer(config.GetConnectionString("DefaultConnection"));
+            options.UseSqlServer(config.GetConnectionString("LocalConnection"));
         });
         return services;
     }
