@@ -1,3 +1,4 @@
+using Microsoft.Azure.Cosmos;
 using Microsoft.EntityFrameworkCore;
 using SDI_App.Data;
 using SDI_App.Mappings;
@@ -13,7 +14,8 @@ public static class PhoneExtensions
     {
         services.AddDbContext<DataContext>(options =>
         {
-            options.UseSqlServer(config.GetConnectionString("LocalConnection"), sqlServerOptionsAction: sqlOptions => { sqlOptions.EnableRetryOnFailure(); });
+            options.UseSqlServer(config.GetConnectionString("DefaultConnection"),
+            sqlServerOptionsAction: sqlOptions => { sqlOptions.EnableRetryOnFailure(); });
         });
         return services;
     }
