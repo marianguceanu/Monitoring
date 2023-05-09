@@ -1,6 +1,5 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
-using SDI_App.DTO.TableDTOs;
 
 namespace SDI_App.Models
 {
